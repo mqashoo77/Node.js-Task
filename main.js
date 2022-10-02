@@ -1,9 +1,9 @@
 const fs = require('fs');
 const readline = require('readline');
-var filaName = 'users.csv'
+const filaName = 'users.csv'
 const fileStream = fs.createReadStream(filaName);
 
-var interfaceReader = readline.createInterface({
+const interfaceReader = readline.createInterface({
     input: fileStream
 });
 
@@ -14,9 +14,6 @@ async function readFromFile(){
        
        const temp = line.split(",")
        users.push(temp)
-       //console.log(temp)
-      
-       
     }
     return users;
 }
